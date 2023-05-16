@@ -40,4 +40,4 @@ top5costumers_cte (total_amount_paid) AS
 	LIMIT 5
  	)
 SELECT AVG (total_amount_paid) AS top5customers_avg
-FROM top5costumers_cte
+FROM top5costumers_cte 
