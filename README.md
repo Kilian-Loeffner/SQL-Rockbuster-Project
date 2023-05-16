@@ -6,3 +6,7 @@ Rockbuster Stealth LLC is a movie rental company looking to start in the online 
 
 ## Data 
 The data is provided by CareerFoundry and is avialable [here](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip).
+
+## Tableau Visualisations 
+- [Geographical Distribution](https://public.tableau.com/app/profile/kilian.loeffner/viz/Rockbuster-GeographicalDistribution/GeographicalDistribution)
+- [TOP 10 countries](https://public.tableau.com/app/profile/kilian.loeffner/viz/Rockbuster-Top10Countries/Top10Countries)
