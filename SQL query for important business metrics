@@ -1,0 +1,25 @@
+--Create a data overview on important business metrics - amount of films, min, max and average rental durations and rate, most used film language, total revenue
+
+--Overview Table (film count, MIN MAX AVG rental duration/cost, most frequent film language, total revenue)
+SELECT
+--film count
+COUNT (DISTINCT C.inventory_id) AS film_count,
+--rental rate, duration
+MIN (A.rental_duration) AS min_rental_duration,
+MAX (A.rental_duration) AS max_rental_duration,
+AVG (A.rental_duration) AS avg_rental_duration,
+
+MIN (A.rental_rate) AS min_rental_rate,
+MAX (A.rental_rate) AS max_rental_rate,
+AVG (A.rental_rate) AS avg_rental_rate,
+--most frequent film language
+MODE () WITHIN GROUP (ORDER BY B.name ) AS language_mode,
+--total revenue
+SUM (E.amount) AS total_revenue
+
+FROM film A
+
+INNER JOIN language B 	ON A.language_id = B.language_id
+INNER JOIN inventory C 	ON A.film_id = C.film_id
+INNER JOIN rental D 	ON C.inventory_id = D.inventory_id
+INNER JOIN payment E 	ON D.rental_id = E.rental_id
