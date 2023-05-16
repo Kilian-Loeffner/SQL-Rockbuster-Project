@@ -1,4 +1,4 @@
-A SQL query using table expressions to display the average total amount spend by the TOP 5 customers in the TOP 10 cities within TOP 10 countries in term of customer amount.
+--A SQL query using table expressions to display the average total amount spend by the TOP 5 customers in the TOP 10 cities within TOP 10 countries in term of customer amount.
 
 --CTE Top 10 Countries 
 WITH top10countries_cte (country) AS
