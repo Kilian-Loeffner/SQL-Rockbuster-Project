@@ -39,5 +39,6 @@ top5costumers_cte (total_amount_paid) AS
 	ORDER BY total_amount_paid DESC
 	LIMIT 5
  	)
+--Get average value of total amount spend for TOP5 customers 	
 SELECT AVG (total_amount_paid) AS top5customers_avg
 FROM top5costumers_cte 
